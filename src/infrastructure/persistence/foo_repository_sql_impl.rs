@@ -10,6 +10,7 @@ pub struct FooRepositorySqlImpl {
 
 impl FooRepositorySqlImpl {
     pub fn new(pool: Pool<Postgres>) -> Self {
+        block_on(sqlx::migrate!().run(&pool)).unwrap();
         FooRepositorySqlImpl { pool }
     }
 

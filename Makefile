@@ -45,11 +45,6 @@ start-db: ## start the docker database
 		-p 5432:5432 \
 		postgres:14.1
 
-
-.PHONY: init-db
-init-db: ## init the docker database
-	$(DOCKER) exec -it rust-postgres psql -U $(POSTGRES_USER) $(POSTGRES_DB) -c "CREATE TABLE foo(id varchar, name varchar, number_of_years bigint);"
-
 .PHONY: stop-db
 stop-db: ## stop the docker database and remove it
 	$(DOCKER) stop rust-postgres

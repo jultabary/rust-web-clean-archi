@@ -22,7 +22,7 @@ mod tests {
         let number_of_years = None;
 
         // When
-        let foo = Foo::new(name.clone(), number_of_years);
+        let foo = Foo::new(name, number_of_years);
 
         // Then
         assert_eq!(foo.id().to_uuid(), FooId::new(&name).to_uuid());
