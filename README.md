@@ -1,4 +1,4 @@
-# Rust Clean Architecture Proposal
+# Rust Clean Architecture
 
 ## Libraries used
 - <a href="https://rocket.rs">rocket</a> for exposing HTTP API
